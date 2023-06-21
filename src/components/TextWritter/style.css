@@ -1,0 +1,14 @@
+.neon-text {
+  z-index: 1;
+  cursor: pointer;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
+    0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.neon-text:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white,
+    0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white;
+}
