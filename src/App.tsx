@@ -2,16 +2,19 @@ import "./App.css";
 import Moon from "./components/Moon";
 import TextWritter from "./components/TextWritter";
 import Campfire from "./assets/campfire.mp4";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { tArray } from "./utils/texts.js";
 
 function App() {
-  const [currentText, setCurrentText] = useState(
-    "Can you help me? I need to find the answer..."
-  );
+  const [currentText, setCurrentText] = useState("");
 
   function handleClick(e: any) {
     console.log(e);
   }
+
+  useEffect(() => {
+    setCurrentText(tArray[0].content);
+  });
 
   return (
     <div className="main">
