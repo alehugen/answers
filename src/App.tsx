@@ -34,12 +34,10 @@ function App() {
       audioElement?.play();
     };
 
-    document.addEventListener("click", handleClick);
-
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
+    if (!start) {
+      handleClick();
+    }
+  }, [start]);
 
   return (
     <>
