@@ -4,7 +4,7 @@ import TextWritter from "./components/TextWritter";
 import Campfire from "./assets/campfire.mp4";
 import { useEffect, useState, useRef } from "react";
 import { paragraphs } from "./utils/index.ts";
-import music from "./assets/Ocean Waves _ LOFI NATURE.mp3";
+import music from "./assets/OceanWaves.mp3";
 
 function App() {
   const [currentText, setCurrentText] = useState("");
