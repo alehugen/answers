@@ -39,7 +39,6 @@ button {
   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-decoration: none;
@@ -49,6 +48,7 @@ button {
   padding: 1rem;
   position: absolute;
   bottom: 15%;
+  right: 20%;
 }
 
 button:before {
@@ -66,17 +66,17 @@ button:hover:before {
   width: 3rem;
 }
 
-.neon-text {
+.neon {
   z-index: 1;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 28px;
   color: white;
   text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 30px white,
     0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
   transition: text-shadow 0.5s ease-in-out;
 }
 
-.neon-text:hover {
+.neon:hover {
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 60px white,
     0 0 80px white, 0 0 100px white, 0 0 120px white, 0 0 140px white;
 }
