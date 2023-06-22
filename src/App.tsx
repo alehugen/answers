@@ -27,7 +27,7 @@ function App() {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    const audioElement = audioRef.current;
+    const audioElement: any = audioRef.current;
 
     const handleClick = () => {
       audioElement?.play();
