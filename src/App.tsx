@@ -7,6 +7,7 @@ import { paragraphs } from "./utils/index.ts";
 import music from "./assets/OceanWaves.mp3";
 
 function App() {
+  const [start, setStart] = useState(true);
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [show, setShow] = useState(false);
@@ -41,25 +42,34 @@ function App() {
   }, []);
 
   return (
-    <div className="main">
-      <audio ref={audioRef} src={music} loop>
-        <source src={music} type="audio/mpeg" />
-      </audio>
-      <video className="video" autoPlay loop muted>
-        <source src={Campfire} type="video/mp4" />
-      </video>
-      <div className="mask"></div>
+    <>
+      {start ? (
+        <div className="start">
+          <Moon />
+          <button onClick={() => setStart(false)}>Iniciar</button>
+        </div>
+      ) : (
+        <div className="main">
+          <audio ref={audioRef} src={music} loop>
+            <source src={music} type="audio/mpeg" />
+          </audio>
+          <video className="video" autoPlay loop muted>
+            <source src={Campfire} type="video/mp4" />
+          </video>
+          <div className="mask"></div>
 
-      <Moon />
+          <Moon />
 
-      <TextWritter text={currentText} delay={70} showButton={setShow} />
+          <TextWritter text={currentText} delay={70} showButton={setShow} />
 
-      {show && currentIndex < size ? (
-        <button className="btn" onClick={() => handleClick(currentText)}>
-          <p className="neon">Continue</p>
-        </button>
-      ) : null}
-    </div>
+          {show && currentIndex < size ? (
+            <button className="btn" onClick={() => handleClick(currentText)}>
+              <p className="neon">Continue</p>
+            </button>
+          ) : null}
+        </div>
+      )}
+    </>
   );
 }
 
